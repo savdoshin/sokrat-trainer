@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сократ — тренер мышления для лидеров Вертера</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Боковая панель -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">🏛️</div>
+                <h2>Сократ</h2>
+                <p class="subtitle">Тренер мышления для лидеров Вертера</p>
+            </div>
+            <div class="sidebar-section">
+                <h3>📚 Глоссарий</h3>
+                <div class="glossary-list" id="glossaryList"></div>
+            </div>
+            <div class="sidebar-section">
+                <h3>🧠 Две модели</h3>
+                <button class="model-btn ideal" id="showIdealModel">✨ Идеальная модель</button>
+                <button class="model-btn terrible" id="showTerribleModel">⚠️ Ужасная модель</button>
+            </div>
+            <div class="sidebar-footer">
+                <button class="btn-new-chat" id="newChatBtn">Новый диалог</button>
+                <p class="version">v1.0 • Вертера</p>
+            </div>
+        </aside>
+
+        <!-- Мобильный toggle -->
+        <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+
+        <!-- Основной чат -->
+        <main class="chat-container">
+            <div class="chat-header">
+                <h1>Сократ</h1>
+                <p>Тренер мышления • Вертера</p>
+                <button class="btn-scroll-bottom" id="scrollBottomBtn" title="В конец диалога">↓</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="welcome-message">
+                    <div class="socrates-avatar">🏛️</div>
+                    <p>Приветствую тебя, лидер. Я — Сократ, и моё ремесло — задавать вопросы, которые меняют мышление.</p>
+                    <p>Какую ситуацию или вызов в бизнесе ты хочешь разобрать сегодня?</p>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <textarea 
+                    id="chatInput" 
+                    placeholder="Опиши свою ситуацию или приведи цитату партнёра..."
+                    rows="1"
+                    autofocus
+                ></textarea>
+                <button class="btn-send" id="sendBtn" title="Отправить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M2 10L18 2L10 18L8 12L2 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Модальные окна -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="glossary.js"></script>
+    <script src="prompt.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
