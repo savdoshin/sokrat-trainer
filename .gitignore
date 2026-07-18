@@ -1,0 +1,9 @@
+# API Keys
+API_KEY.js
+config.js
+.env
+*.key
+
+# System files
+.DS_Store
+node_modules/
